@@ -12,16 +12,18 @@ type HeroPanelProps = {
 
 export function HeroPanel({ service }: HeroPanelProps) {
   return (
-    <section className="relative min-h-[820px] overflow-hidden px-5 py-6 md:px-8 lg:h-screen lg:min-h-0">
+    <section className="relative flex h-screen min-h-[720px] flex-col overflow-hidden px-5 py-6 md:px-8">
       <Link
         href="/cosa-facciamo"
-        className="inline-flex rounded-2xl border border-white/60 bg-[#192323]/65 px-6 py-3 text-2xl uppercase text-[#b6e9bd] transition hover:border-primary hover:text-primary md:text-3xl"
+        className="inline-flex w-fit shrink-0 rounded-2xl border border-white/60 bg-[#192323]/65 px-6 py-3 text-2xl uppercase text-[#b6e9bd] transition hover:border-primary hover:text-primary md:text-3xl"
       >
         Cosa facciamo
       </Link>
 
       <Brand />
-      <ServiceDashboard service={service} />
+      <div className="theme-scrollbar relative z-10 mt-6 min-h-0 flex-1 overflow-y-auto overflow-x-hidden pb-56 pr-2 md:pr-4">
+        <ServiceDashboard service={service} />
+      </div>
       <ConsultingCta />
       <BusinessFooter />
     </section>

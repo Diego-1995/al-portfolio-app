@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingegneria Meccanica</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background:
+        linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.82)),
+        url("cosa facciamo.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      padding: 35px 70px;
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 400;
+      margin-bottom: 34px;
+    }
+
+    p {
+      font-size: 26px;
+      line-height: 1.45;
+      margin-bottom: 30px;
+    }
+
+    .intro strong,
+    li strong {
+      font-weight: 800;
+    }
+
+    ul {
+      margin-top: 20px;
+      list-style: none;
+    }
+
+    li {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 20px;
+      font-size: 26px;
+      line-height: 1.45;
+      margin-bottom: 28px;
+    }
+
+    li::before {
+      content: "o";
+      font-size: 28px;
+      line-height: 1.3;
+    }
+
+    .icons {
+      display: flex;
+      gap: 28px;
+      margin-top: 55px;
+      align-items: center;
+    }
+
+    .file {
+      width: 78px;
+      height: 105px;
+      border-radius: 6px;
+      color: white;
+      font-weight: 900;
+      font-size: 22px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 12px;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,.12);
+    }
+
+    .file::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-top: 22px solid white;
+      border-left: 22px solid rgba(255,255,255,.65);
+    }
+
+    .cad { background: #e46f00; }
+    .pdf { background: #d91b08; }
+    .step { background: #12adc3; }
+    .dwg { background: #8d4079; }
+    .xlsx { background: #27c94f; }
+    .docx { background: #4d99ed; }
+    .txt { background: #b8b8b8; }
+    .bom { background: #e5b400; }
+
+    @media (max-width: 900px) {
+      .page { padding: 28px; }
+      h1 { font-size: 32px; }
+      p, li { font-size: 19px; }
+      .icons { flex-wrap: wrap; gap: 16px; }
+      .file { width: 64px; height: 86px; font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Ingegneria Meccanica: Dal Concetto alla Messa in Servizio</h1>
+
+    <p class="intro">
+      Offriamo un servizio completo di <strong>progettazione meccanica su misura</strong>,
+      trasformando le vostre idee e specifiche tecniche in soluzioni industriali concrete
+      e pronte per la produzione.
+    </p>
+
+    <p>
+      Affianchiamo il cliente passo dopo passo attraverso un workflow strutturato e trasparente:
+    </p>
+
+    <ul>
+      <li>
+        <span>
+          <strong>Studio di Fattibilità:</strong>
+          Analisi preliminare, calcoli strutturali e valutazione delle soluzioni cinematiche
+          per garantire la riuscita del progetto.
+        </span>
+      </li>
+
+      <li>
+        <span>
+          <strong>Progettazione e Modellazione 3D:</strong>
+          Sviluppo del gruppo meccanico o dell'impianto speciale secondo le vostre specifiche richieste.
+        </span>
+      </li>
+
+      <li>
+        <span>
+          <strong>Messa in Tavola e Documentazione:</strong>
+          Redazione di disegni costruttivi bidimensionali di dettaglio con tolleranze geometriche
+          e dimensionali precise.
+        </span>
+      </li>
+
+      <li>
+        <span>
+          <strong>Distinta Base (BOM):</strong>
+          Creazione di distinte componenti accurate per ottimizzare gli acquisti e la gestione
+          della produzione.
+        </span>
+      </li>
+
+      <li>
+        <span>
+          <strong>Project Management e Supporto al Fornitore:</strong>
+          Seguiamo direttamente tutte le fasi della costruzione e del montaggio, risolvendo ogni criticità
+          fino al collaudo finale.
+        </span>
+      </li>
+    </ul>
+
+    <div class="icons">
+      <div class="file cad">CAD</div>
+      <div class="file pdf">PDF</div>
+      <div class="file step">STEP</div>
+      <div class="file dwg">DWG</div>
+      <div class="file xlsx">XLSX</div>
+      <div class="file docx">DOCX</div>
+      <div class="file txt">TXT</div>
+      <div class="file bom">BOM</div>
+    </div>
+  </main>
+</body>
+</html>

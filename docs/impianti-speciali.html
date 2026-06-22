@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Impianti Speciali | AUTOMA</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      background: #050707;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.38), rgba(0,0,0,.76)),
+        linear-gradient(rgba(0,0,0,.26), rgba(0,0,0,.46)),
+        url("impianti-speciali.jpg");
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 72% 30%, rgba(141,255,156,.12), transparent 32%),
+        linear-gradient(rgba(120,255,160,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(120,255,160,.035) 1px, transparent 1px);
+      background-size: auto, 46px 46px, 46px 46px;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .page {
+      height: 100vh;
+      padding: 38px 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .content {
+      max-width: 1180px;
+      padding: 34px 34px 38px;
+      background: linear-gradient(90deg, rgba(0,0,0,.68), rgba(0,0,0,.38), rgba(0,0,0,.08));
+      border-left: 3px solid rgba(141,255,156,.9);
+      box-shadow: 0 0 40px rgba(0,0,0,.45);
+    }
+
+    .tag {
+      display: inline-block;
+      margin-bottom: 22px;
+      padding: 10px 18px;
+      border: 1px solid rgba(141,255,156,.55);
+      border-radius: 8px;
+      color: #8dff9c;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      background: rgba(10,18,18,.65);
+      box-shadow: 0 0 18px rgba(141,255,156,.22);
+    }
+
+    h1 {
+      font-size: clamp(40px, 5vw, 72px);
+      line-height: 1.04;
+      font-weight: 400;
+      margin-bottom: 30px;
+      text-shadow: 0 0 22px rgba(0,0,0,.9);
+    }
+
+    h1 span {
+      color: #8dff9c;
+      text-shadow: 0 0 22px rgba(141,255,156,.65);
+    }
+
+    p {
+      max-width: 1120px;
+      font-size: clamp(22px, 2.15vw, 34px);
+      line-height: 1.45;
+      font-weight: 500;
+      margin-bottom: 26px;
+      text-shadow: 0 0 18px rgba(0,0,0,.95);
+    }
+
+    strong {
+      color: #fff;
+      font-weight: 900;
+    }
+
+    .cta {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 16px 24px;
+      border-radius: 12px;
+      background: #8dff9c;
+      color: #03100a;
+      text-decoration: none;
+      font-weight: 900;
+      box-shadow: 0 0 28px rgba(141,255,156,.6);
+    }
+
+    .bottom {
+      position: fixed;
+      left: 56px;
+      right: 56px;
+      bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #c9d8d0;
+      font-size: 15px;
+      text-shadow: 0 0 14px #000;
+    }
+
+    .bottom span {
+      color: #8dff9c;
+    }
+
+    @media (max-width: 900px) {
+      html, body { overflow: auto; height: auto; }
+
+      .page {
+        min-height: 100vh;
+        height: auto;
+        padding: 28px 20px 90px;
+      }
+
+      .content {
+        padding: 26px 22px;
+      }
+
+      .bottom {
+        position: static;
+        padding: 0 20px 24px;
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <section class="content">
+      <div class="tag">AUTOMA · Soluzioni su misura</div>
+
+      <h1>
+        <span>Impianti Speciali:</span><br />
+        Soluzioni Uniche per Sfide Complesse
+      </h1>
+
+      <p>
+        Progettiamo e sviluppiamo <strong>impianti industriali speciali su misura</strong>,
+        ingegnerizzati per rispondere a specifiche tecniche uniche e non standard.
+      </p>
+
+      <p>
+        Dall’analisi preliminare alla configurazione finale, trasformiamo le vostre
+        necessità operative in sistemi completi e integrati.
+        <strong>Realizziamo soluzioni chiavi in mano</strong> capaci di superare i vincoli
+        della produzione di serie, garantendo elevata automazione, ottimizzazione dei flussi
+        e totale affidabilità nel tempo.
+      </p>
+
+      <a class="cta" href="mailto:info@automaprogetti.com">Richiedi consulenza</a>
+    </section>
+  </main>
+</body>
+</html>
