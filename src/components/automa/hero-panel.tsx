@@ -34,9 +34,9 @@ export function HeroPanel({ service }: HeroPanelProps) {
         Cosa facciamo
       </Link>
 
-      <Brand />
+      {isHome && <Brand />}
       <div className="theme-scrollbar relative z-10 mt-4 flex-1 pb-36 pr-2 md:pr-4 lg:min-h-0 lg:overflow-hidden">
-        {service && (
+        {service?.backgroundImage && (
           <Image
             src={service.backgroundImage}
             alt={service.title}

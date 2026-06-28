@@ -6,8 +6,8 @@ export type AutomaService = {
   eyebrow: string;
   description: string;
   dashboardTitle: string;
-  dashboardDescription: string;
-  backgroundImage: string;
+  dashboardDescription: string | string[];
+  backgroundImage?: string;
   highlights: string[];
   stats: string[];
   icon: LucideIcon;
