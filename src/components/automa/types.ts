@@ -7,6 +7,7 @@ export type AutomaService = {
   description: string;
   dashboardTitle: string;
   dashboardDescription: string;
+  backgroundImage: string;
   highlights: string[];
   stats: string[];
   icon: LucideIcon;

@@ -12,6 +12,7 @@ export const services: AutomaService[] = [
     dashboardTitle: "Attrezzature dedicate alla tua linea",
     dashboardDescription:
       "Trasformiamo vincoli produttivi, ergonomia e tolleranze in attrezzature robuste, replicabili e facili da integrare in reparto.",
+    backgroundImage: "/attrezzature-background.png",
     highlights: [
       "Analisi pezzo e ciclo di lavorazione",
       "Sistemi di bloccaggio, controllo e appoggio",
@@ -29,6 +30,7 @@ export const services: AutomaService[] = [
     dashboardTitle: "Macchine speciali dalla specifica al collaudo",
     dashboardDescription:
       "Progettiamo architetture meccaniche e sistemi automatici quando le soluzioni standard non bastano o rallentano il processo.",
+    backgroundImage: "/impianti-speciali-background.png",
     highlights: [
       "Concept meccanico e layout impianto",
       "Integrazione sensori, attuatori e sicurezza",
@@ -46,6 +48,7 @@ export const services: AutomaService[] = [
     dashboardTitle: "Celle robotiche per processi ripetibili",
     dashboardDescription:
       "Definiamo prese, percorsi, asservimenti e interfacce per rendere stabile il processo e ridurre interventi manuali a basso valore.",
+    backgroundImage: "/Gemini_Generated_Image_a5ldlla5ldlla5ld.png",
     highlights: [
       "Studio gripper e cinematica di cella",
       "Movimentazione, assemblaggio e picking",
