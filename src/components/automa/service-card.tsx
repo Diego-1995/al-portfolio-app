@@ -20,7 +20,7 @@ export function ServiceCard({
       aria-pressed={isSelected}
       onClick={onSelect}
       className={cn(
-        "group rounded-lg border border-primary/25 bg-card/80 px-4 py-6 text-center shadow-[inset_0_0_30px_rgba(95,255,140,0.05),0_0_18px_rgba(95,255,140,0.18)] transition hover:-translate-y-0.5 hover:border-primary/70 hover:bg-primary/10 focus-visible:ring-2 focus-visible:ring-primary lg:flex lg:h-full lg:min-h-0 lg:flex-col lg:items-center lg:justify-center lg:px-3 lg:py-4",
+        "group cursor-pointer rounded-lg border border-primary/25 bg-card/80 px-4 py-6 text-center shadow-[inset_0_0_30px_rgba(95,255,140,0.05),0_0_18px_rgba(95,255,140,0.18)] transition hover:-translate-y-0.5 hover:border-primary/70 hover:bg-primary/10 focus-visible:ring-2 focus-visible:ring-primary lg:flex lg:h-full lg:min-h-0 lg:flex-col lg:items-center lg:justify-center lg:px-3 lg:py-4",
         isSelected &&
           "border-primary/90 bg-primary/15 shadow-[inset_0_0_30px_rgba(95,255,140,0.12),0_0_26px_rgba(95,255,140,0.45)]",
       )}

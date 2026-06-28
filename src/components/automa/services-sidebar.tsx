@@ -16,7 +16,7 @@ export function ServicesSidebar({
       <Button
         variant="outline"
         onClick={() => onSelectService(null)}
-        className="mb-5 h-11 w-full shrink-0 rounded-[7px] border-primary/70 bg-transparent text-xs uppercase tracking-[0.18em] text-[var(--automa-green-soft)] shadow-[0_0_18px_rgba(95,255,140,0.45)] hover:bg-primary/10 hover:text-primary"
+        className="mb-5 h-11 w-full shrink-0 cursor-pointer rounded-[7px] border-primary/70 bg-transparent text-xs uppercase tracking-[0.18em] text-[var(--automa-green-soft)] shadow-[0_0_18px_rgba(95,255,140,0.45)] hover:bg-primary/10 hover:text-primary"
       >
         Scopri i nostri progetti
       </Button>
