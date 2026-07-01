@@ -27,14 +27,14 @@ export async function POST(request: Request) {
   const port = Number(process.env.SMTP_PORT ?? 587);
   const user = process.env.SMTP_USER;
   const pass = process.env.SMTP_PASS;
-  const to = process.env.CONTACT_TO_EMAIL ?? "info@automaprogetti.com";
-  const from = process.env.CONTACT_FROM_EMAIL ?? user;
+  const to = "info@automaprogetti.com";
+  const from = user;
 
-  if (!host || !user || !pass || !from) {
+  if (!host || !user || !pass) {
     return NextResponse.json(
       {
         message:
-          "Invio email non configurato. Mancano SMTP_HOST, SMTP_USER, SMTP_PASS o CONTACT_FROM_EMAIL.",
+          "Invio email non configurato. Mancano SMTP_HOST, SMTP_USER o SMTP_PASS.",
       },
       { status: 500 },
     );

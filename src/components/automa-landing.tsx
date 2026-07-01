@@ -16,7 +16,7 @@ export function AutomaLanding() {
 
   return (
     <main className="automa-grid min-h-screen text-white lg:h-dvh lg:overflow-hidden">
-      <div className="grid min-h-screen lg:h-dvh lg:min-h-0 lg:grid-cols-[260px_1fr]">
+      <div className="grid min-h-screen lg:h-dvh lg:min-h-0 lg:grid-cols-[310px_1fr]">
         <ServicesSidebar
           selectedServiceId={selectedServiceId}
           onSelectService={setSelectedServiceId}

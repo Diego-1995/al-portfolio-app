@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import {
   ClipboardList,
   Cuboid,
@@ -54,6 +55,17 @@ const deliverables: { label: string; className: string; icon: LucideIcon }[] = [
 export default function CosaFacciamoPage() {
   return (
     <main className="automa-grid relative min-h-screen overflow-hidden px-5 py-6 pb-40 text-white md:px-8">
+      <Image
+        src="/background-cosa-facciamo.jpg"
+        alt="Background cosa facciamo"
+        width={1024}
+        height={256}
+        priority
+        unoptimized
+        className="pointer-events-none absolute left-1/2 top-32 z-0 w-[min(92vw,1280px)] -translate-x-1/2 object-contain opacity-45 mix-blend-screen"
+      />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_26%,rgba(95,255,140,0.12),transparent_32%),linear-gradient(180deg,rgba(0,0,0,0.15),rgba(0,0,0,0.72)_42%,rgba(0,0,0,0.42))]" />
+
       <Link
         href="/"
         className="relative z-10 inline-flex rounded-2xl border border-white/60 bg-[#192323]/65 px-6 py-3 text-sm uppercase tracking-[0.2em] text-[#b6e9bd] transition hover:border-primary hover:text-primary"

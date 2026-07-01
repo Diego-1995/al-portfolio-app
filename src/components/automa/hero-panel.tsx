@@ -35,22 +35,22 @@ export function HeroPanel({ service }: HeroPanelProps) {
       </Link>
 
       {isHome && <Brand />}
-      <div className="theme-scrollbar relative z-10 mt-2 flex-1 overflow-hidden pb-36 pr-2 md:pr-4 lg:min-h-0">
+      <div className="theme-scrollbar relative z-10 mt-2 flex-1 overflow-hidden pb-8 pr-2 md:pb-36 md:pr-4 lg:min-h-0">
         {service?.backgroundImage && (
-          <div className="pointer-events-none absolute inset-x-0 bottom-32 -top-2.5 z-0 overflow-hidden md:bottom-16">
+          <div className="pointer-events-none absolute inset-x-0 bottom-32 -top-2.5 z-0 md:bottom-16">
             <Image
               src={service.backgroundImage}
               alt={service.title}
               fill
               priority
               unoptimized
-              className="translate-y-8 -translate-x-8 scale-105 object-cover md:translate-y-10 md:-translate-x-12"
+              className="object-contain object-center opacity-35 mix-blend-screen"
             />
           </div>
         )}
         <ServiceDashboard service={service} />
       </div>
-      <ConsultingCta />
+      {isHome && <ConsultingCta />}
       <BusinessFooter />
     </section>
   );

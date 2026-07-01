@@ -13,7 +13,7 @@ export function Brand() {
           className="mx-auto h-auto w-[103%] max-w-none -translate-x-[1.5%] scale-[1.04]"
         />
       </div>
-      <h1 className="whitespace-nowrap text-[clamp(1.75rem,5.2vw,3.65rem)] font-black uppercase leading-none tracking-[0.04em] text-white drop-shadow-[0_0_14px_rgba(0,0,0,0.95)]">
+      <h1 className="text-[clamp(1.35rem,7.5vw,3.65rem)] font-black uppercase leading-none tracking-[0.04em] text-white drop-shadow-[0_0_14px_rgba(0,0,0,0.95)] sm:whitespace-nowrap">
         Ingegneria delle idee
       </h1>
     </div>
