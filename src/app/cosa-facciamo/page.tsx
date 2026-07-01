@@ -57,14 +57,14 @@ export default function CosaFacciamoPage() {
     <main className="automa-grid relative min-h-screen overflow-hidden px-5 py-6 pb-40 text-white md:px-8">
       <Image
         src="/background-cosa-facciamo.jpg"
-        alt="Background cosa facciamo"
-        width={1024}
-        height={256}
+        alt=""
+        fill
         priority
         unoptimized
-        className="pointer-events-none absolute left-1/2 top-32 z-0 w-[min(92vw,1280px)] -translate-x-1/2 object-contain opacity-45 mix-blend-screen"
+        aria-hidden="true"
+        className="pointer-events-none z-0 object-cover opacity-12 mix-blend-screen"
       />
-      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_26%,rgba(95,255,140,0.12),transparent_32%),linear-gradient(180deg,rgba(0,0,0,0.15),rgba(0,0,0,0.72)_42%,rgba(0,0,0,0.42))]" />
+      <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_26%,rgba(95,255,140,0.12),transparent_32%),linear-gradient(180deg,rgba(0,0,0,0.38),rgba(0,0,0,0.82)_42%,rgba(0,0,0,0.58))]" />
 
       <Link
         href="/"
@@ -75,8 +75,8 @@ export default function CosaFacciamoPage() {
 
       <Brand />
 
-      <section className="relative z-10 mx-auto mt-10 w-full max-w-6xl rounded-3xl border border-primary/30 bg-black/40 p-6 shadow-[0_0_32px_rgba(95,255,140,0.16),inset_0_0_28px_rgba(95,255,140,0.06)] backdrop-blur-md md:p-8 lg:p-10">
-        <div className="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-start">
+      <section className="relative z-10 mx-auto mt-10 w-full max-w-6xl overflow-hidden rounded-3xl border border-primary/30 bg-black/40 p-6 shadow-[0_0_32px_rgba(95,255,140,0.16),inset_0_0_28px_rgba(95,255,140,0.06)] backdrop-blur-md md:p-8 lg:p-10">
+        <div className="relative z-10 grid gap-8 lg:grid-cols-[1fr_360px] lg:items-start">
           <div>
             <p className="mb-3 text-sm uppercase tracking-[0.24em] text-primary">
               Cosa facciamo
@@ -98,33 +98,47 @@ export default function CosaFacciamoPage() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-primary/25 bg-[#122018]/60 p-5 shadow-[0_0_24px_rgba(95,255,140,0.16)]">
-            <p className="text-xs uppercase tracking-[0.22em] text-primary">
-              Output di progetto
-            </p>
-            <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2">
-              {deliverables.map((file) => {
-                const Icon = file.icon;
+          <div className="grid gap-5">
+            <div className="overflow-hidden rounded-3xl border border-primary/25 bg-[#122018]/60 p-3 shadow-[0_0_24px_rgba(95,255,140,0.16)]">
+              <Image
+                src="/background-cosa-facciamo.jpg"
+                alt="Progettazione meccanica AUTOMA"
+                width={1024}
+                height={256}
+                priority
+                unoptimized
+                className="h-auto w-full rounded-2xl object-contain opacity-85 mix-blend-screen"
+              />
+            </div>
 
-                return (
-                  <div
-                    key={file.label}
-                    className={`${file.className} relative flex h-24 flex-col items-center justify-end overflow-hidden rounded-lg pb-3 text-lg font-black text-white shadow-[0_8px_20px_rgba(0,0,0,0.32)] before:absolute before:right-0 before:top-0 before:border-l-[22px] before:border-t-[22px] before:border-l-white/55 before:border-t-white`}
-                  >
-                    <Icon
-                      aria-hidden="true"
-                      className="mb-2 size-8 drop-shadow-[0_0_10px_rgba(255,255,255,0.45)]"
-                      strokeWidth={2.4}
-                    />
-                    {file.label}
-                  </div>
-                );
-              })}
+            <div className="rounded-3xl border border-primary/25 bg-[#122018]/60 p-5 shadow-[0_0_24px_rgba(95,255,140,0.16)]">
+              <p className="text-xs uppercase tracking-[0.22em] text-primary">
+                Output di progetto
+              </p>
+              <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-2">
+                {deliverables.map((file) => {
+                  const Icon = file.icon;
+
+                  return (
+                    <div
+                      key={file.label}
+                      className={`${file.className} relative flex h-24 flex-col items-center justify-end overflow-hidden rounded-lg pb-3 text-lg font-black text-white shadow-[0_8px_20px_rgba(0,0,0,0.32)] before:absolute before:right-0 before:top-0 before:border-l-[22px] before:border-t-[22px] before:border-l-white/55 before:border-t-white`}
+                    >
+                      <Icon
+                        aria-hidden="true"
+                        className="mb-2 size-8 drop-shadow-[0_0_10px_rgba(255,255,255,0.45)]"
+                        strokeWidth={2.4}
+                      />
+                      {file.label}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4">
+        <div className="relative z-10 mt-10 grid gap-4">
           {workflowSteps.map((step, index) => (
             <article
               key={step.title}
